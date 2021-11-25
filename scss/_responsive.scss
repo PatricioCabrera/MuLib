@@ -1,0 +1,155 @@
+$small: 480px;
+$medium: $small + 288px;
+$large: ($small * 2) + 64;
+
+body{
+    overflow-x: hidden;
+}
+
+@media only screen and (max-width: $large) {
+    h1{
+        font-size: 4rem;
+    }
+
+    h2{
+        font-size: 2.5rem;
+    }
+
+    h3{
+        font-size: 1.6rem;
+    }
+
+    p{
+        font-size: 1.4rem;
+    }
+    .header__nav__list{
+        a{
+            font-size: 1.4rem;
+        }
+    }
+    .main-hero{
+        h1{
+            font-size: 5rem;
+        }
+    }
+    .button{
+        font-size: 2rem;
+    }
+    .communityMainContainer{
+        display: block !important;
+        .communityMainCard{
+            width: 96vw;
+            margin: 1rem;
+            margin: auto;
+        }
+        .communityAsideCard{
+            width: 96vw;
+            margin: 1rem;
+        }
+    }
+}
+
+@media only screen and (max-width: $medium){
+    h1{
+        font-size: 3rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+    h3{
+        font-size: 1.3rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+    .header__nav__list{
+        a{
+            font-size: 1.2rem;
+        }
+    }
+    .main-hero{
+        h1{
+            font-size: 3rem;
+        }
+    }
+    .main-exclusive, .main-community{
+        flex-direction: column !important;
+        padding-bottom: 1.5rem;
+    }
+    .main-store-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card2{
+        img {
+            max-width: 400px;
+        }
+    }
+    .card1{
+        img {
+            max-width: 300px;
+        }
+    }
+    .card3{
+        img{
+            max-width: 300px;
+        }
+    }
+    .button{
+        font-size: 1.3rem;
+    }
+    .footer{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: $small){
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    h3{
+        font-size: 1.3rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    .header__nav__list{
+        margin-right: 0.3rem;
+        a{
+            font-size: 0.8rem;
+        }
+        .header__nav__list__item{
+            padding-left: 0.4rem;
+        }
+    }
+    .main-hero{
+        h1{
+            font-size: 3rem;
+        }
+    }
+    .button{
+        font-size: 1.3rem;
+    }
+    .main-planes-boxContainer__box{
+        margin: 1rem 0.3rem;
+        img{
+            max-width: 400px;
+        }
+    }
+    @for $i from 1 through 3{
+        .card#{$i}{
+            img{
+                max-width: 300px !important;
+                min-width: 100px;
+            }
+        }
+    }
+}

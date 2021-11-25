@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <meta name="description" content="Realizar consulta con nuestro equipo de soporte MuLib. Descargar, escuchar gratis y comprar albums para ir a un paso más allá de inmersión">
+    <meta name="keywords" content="contacto, correo, dudas, suscripcion, spotify, mulib">
+    <script src="https://kit.fontawesome.com/a9b1c6a26a.js" crossorigin="anonymous"></script>
+    <title>Contacto</title>
+</head>
+<body class="body">
+    <header class="header header__bg--black shadow-black">
+        <a href="../index.html" class="header__logo box-scale">
+            <img src="../images/logo.png" alt="logo" width="50">
+        </a>
+        <nav class="header__nav">
+            <ul class="header__nav__list">
+                <li class="header__nav__list__item header__nav__list__item--drop">
+                    <a href=".planes.html">Planes</a>
+                    <ul class="header__nav__subList">
+                        <li class="header__nav__subItem">
+                            <a href="#MuLibBasicBox">BASIC</a>
+                        </li>
+                        <li class="header__nav__subItem">
+                            <a href="#MuLibMasterplanBox">MASTERPLAN</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="header__nav__list__item">
+                    <a href="./tienda.html">Tienda</a>
+                </li>
+                <li class="header__nav__list__item">
+                    <a href="./comunidad.html">Comunidad</a>
+                </li>
+                <li class="header__nav__list__item">
+                    <a href="./contacto.html">Contacto</a>
+                </li>
+                <li class="header__nav__list__item">
+                    <a href="./iniciar_sesion.html">Iniciar sesión</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="sectionContacto">
+            <h2>Contactá con nuestro equipo de soporte</h2>
+            <i class="fas fa-mug-hot"></i>
+            <h3>Despejá tus dudas y recibí asistencia</h3>
+            <h4 class="responseTime">Tiempo de respuesta aproximado: 72hs</h4>
+            <audio autoplay loop>
+                <source src="../sound/392472__saraberrio__ambienteascensor.wav" type="audio/wav">
+            </audio>
+            <form class="sectionContactoForm" action="">
+                <fieldset>
+                    <legend>Datos de contacto</legend>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" id="" placeholder="Tu nombre">
+                    <br><br>
+                    <label for="apellido">Apellido</label>
+                    <input type="text" name="apellido" id="" placeholder="Tu apellido">
+                    <br><br>
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" name="correo" id="" placeholder="pepito@mulib.com.ar">
+                    <br><br>
+                    <label for="sexo">¿Cómo deberíamos llamarte?</label>
+                    <select name="sexo" id="">
+                        <option value="h">Sr.</option>
+                        <option value="m">Sra.</option>
+                        <option value="x">Indistinto</option>
+                    </select>
+                    <br><br>
+                    <legend>Mensaje</legend>
+                    <textarea name="mensaje" id="" cols="30" rows="10" placeholder="Tu mensaje"></textarea>
+                </fieldset>
+                <label for="newsletter"><input type="checkbox" name="newsletter" id="acceptTerms" required>Acepto términos y condiciones</label>
+                <br><br>
+                <div class="buttonArea">
+                    <input type="submit" class="button" value="Enviar">
+                    <input type="reset" class="button" value="Restablecer campos">
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <nav class="footer__nav">
+            <ul class="footer__menu">
+                <li class="footer__item"><a href="#">Legal</a></li>
+                <li class="footer__item"><a href="#">Privacidad</a></li>
+                <li class="footer__item"><a href="#">Cookies</a></li>
+                <li class="footer__item"><a href="#">Anuncios</a></li>
+            </ul>
+        </nav>
+        <p>MuLib - Todos los derechos reservados - 2021</p>
+    </footer>
+</body>
+</html>
