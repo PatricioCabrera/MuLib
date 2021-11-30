@@ -32,6 +32,10 @@ body{
             font-size: 5rem;
         }
     }
+    .main-exclusive, .main-community{
+        flex-direction: column !important;
+        padding-bottom: 1.5rem;
+    }
     .button{
         font-size: 2rem;
     }
@@ -74,10 +78,6 @@ body{
         h1{
             font-size: 3rem;
         }
-    }
-    .main-exclusive, .main-community{
-        flex-direction: column !important;
-        padding-bottom: 1.5rem;
     }
     .main-store-container{
         display: flex;
