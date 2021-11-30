@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <script src="https://kit.fontawesome.com/a9b1c6a26a.js" crossorigin="anonymous"></script>
+    <script src="./js/functions.js"></script>
     <meta name="description" content="Plataforma de streaming gratuita basada en pura calidad. Descargar, escuchar gratis y comprar albums para ir a un paso más allá de inmersión">
     <meta name="keywords" content="streaming, musica, descarga, suscripcion, spotify, mulib">
     <title>Mulib - streaming de música para coleccionistas</title>
@@ -17,8 +18,9 @@
         <a href="./index.html" class="header__logo box-scale">
             <img src="./images/logo.png" alt="logo" width="50">
         </a>
+        <i class="fas fa-bars"  onclick="hamburgerMenu()"></i>
         <nav class="header__nav">
-            <ul class="header__nav__list">
+            <ul class="header__nav__list" id="navList">
                 <li class="header__nav__list__item header__nav__list__item--drop">
                     <a href="./pages/planes.html">Planes</a>
                     <ul class="header__nav__subList">
@@ -73,7 +75,7 @@
                 <h2>Contenido de calidad para entusiastas</h2>
                 <p>MuLIb es la plataforma de Streaming más completa, simulá tu biblioteca física con artworks oficiales,
                 metadatos verificados y contenido complementario subido por la comunidad.</p>
-                <i class="fas fa-music glow-lightblue"></i>
+                <i class="fas fa-music"></i>
             </div>
         </section>
 
@@ -104,7 +106,7 @@
                     </ul>
                     <a class="button">Crear cuenta</a>
                 </div>
-                <div class="main-planes-boxContainer__box box-scale" id="MuLibBasicBox">
+                <div class="main-planes-boxContainer__box shadow-salmon box-scale" id="MuLibBasicBox">
                     <h3>MuLIb BASIC</h3>
                     <img src="./images/planbasic.jpg" alt="Mulib BASIC">
                     <p>Lo que cubre MuLIb FREE +</p>

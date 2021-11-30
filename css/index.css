@@ -1,97 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap");
-body {
-  overflow-x: hidden; }
-
-@media only screen and (max-width: 1024px) {
-  h1 {
-    font-size: 4rem; }
-  h2 {
-    font-size: 2.5rem; }
-  h3 {
-    font-size: 1.6rem; }
-  p {
-    font-size: 1.4rem; }
-  .header__nav__list a {
-    font-size: 1.4rem; }
-  .main-hero h1 {
-    font-size: 5rem; }
-  .main-exclusive, .main-community {
-    flex-direction: column !important;
-    padding-bottom: 1.5rem; }
-  .button, .main-planesHero .main-planesHero__button {
-    font-size: 2rem; }
-  .communityMainContainer {
-    display: block !important; }
-    .communityMainContainer .communityMainCard {
-      width: 96vw;
-      margin: 1rem;
-      margin: auto; }
-    .communityMainContainer .communityAsideCard {
-      width: 96vw;
-      margin: 1rem; } }
-
-@media only screen and (max-width: 768px) {
-  h1 {
-    font-size: 3rem; }
-  h2 {
-    font-size: 2rem; }
-  h3 {
-    font-size: 1.3rem; }
-  p {
-    font-size: 1rem; }
-  .header__nav__list a {
-    font-size: 1.2rem; }
-  .main-hero h1 {
-    font-size: 3rem; }
-  .main-store-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-  .card2 img {
-    max-width: 400px; }
-  .card1 img {
-    max-width: 300px; }
-  .card3 img {
-    max-width: 300px; }
-  .button, .main-planesHero .main-planesHero__button {
-    font-size: 1.3rem; }
-  .footer {
-    flex-direction: column; } }
-
-@media only screen and (max-width: 480px) {
-  h1 {
-    font-size: 3rem; }
-  h2 {
-    font-size: 2rem; }
-  h3 {
-    font-size: 1.3rem; }
-  p {
-    font-size: 1rem; }
-  .header__nav__list {
-    margin-right: 0.3rem; }
-    .header__nav__list a {
-      font-size: 0.8rem; }
-    .header__nav__list .header__nav__list__item {
-      padding-left: 0.4rem; }
-  .main-hero h1 {
-    font-size: 3rem; }
-  .button, .main-planesHero .main-planesHero__button {
-    font-size: 1.3rem; }
-  .main-planes-boxContainer__box {
-    margin: 1rem 0.3rem; }
-    .main-planes-boxContainer__box img {
-      max-width: 400px; }
-  .card1 img {
-    max-width: 300px !important;
-    min-width: 100px; }
-  .card2 img {
-    max-width: 300px !important;
-    min-width: 100px; }
-  .card3 img {
-    max-width: 300px !important;
-    min-width: 100px; } }
-
 /* Comentario realizado desde GITHUB */
 * {
   font-family: 'Montserrat', sans-serif;
@@ -131,12 +38,17 @@ h4 {
 .header {
   position: fixed;
   display: flex;
+  align-items: center;
   width: 100vw;
   height: 50px;
   justify-content: space-between;
   z-index: 2;
   animation-name: header-translate;
   animation-duration: 1s; }
+  .header .fa-bars {
+    color: white;
+    font-size: 1.5rem;
+    display: none; }
 
 .header__bg--black {
   background-color: black; }
@@ -431,7 +343,9 @@ section {
 .main-store-container {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
 
 .main-store-container_card {
   display: inline-block; }
@@ -813,3 +727,130 @@ section {
   to {
     transform: translateY(0);
     opacity: 1; } }
+
+body {
+  overflow-x: hidden; }
+
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 4rem; }
+  h2 {
+    font-size: 2.5rem; }
+  h3 {
+    font-size: 1.6rem; }
+  p {
+    font-size: 1.4rem; }
+  .header__nav__list a {
+    font-size: 1.4rem; }
+  .main-hero h1 {
+    font-size: 5rem; }
+  .main-exclusive, .main-community {
+    flex-direction: column !important;
+    padding-bottom: 1.5rem;
+    height: 95vh !important; }
+  .button, .main-planesHero .main-planesHero__button {
+    font-size: 2rem; }
+  .communityMainContainer {
+    display: block !important; }
+    .communityMainContainer .communityMainCard {
+      width: 96vw;
+      margin: 1rem;
+      margin: auto; }
+    .communityMainContainer .communityAsideCard {
+      width: 96vw;
+      margin: 1rem; }
+  .main-store-container .card2 img {
+    max-width: 300px; }
+  .main-store-container .card1 img, .main-store-container .card3 img {
+    max-width: 200px; } }
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 3rem; }
+  h2 {
+    font-size: 2rem; }
+  h3 {
+    font-size: 1.3rem; }
+  p {
+    font-size: 1rem; }
+  .header {
+    display: block;
+    height: auto; }
+    .header .fa-bars {
+      display: block;
+      padding-right: 0.5rem;
+      position: absolute;
+      top: 10px;
+      right: 0;
+      font-size: 1.8rem; }
+    .header .header__nav {
+      display: block; }
+      .header .header__nav .header__nav__list {
+        text-align: center;
+        background-color: black;
+        margin: 0;
+        display: none; }
+        .header .header__nav .header__nav__list .header__nav__list__item--drop:hover .header__nav__subList {
+          display: block;
+          position: relative;
+          text-align: center; }
+        .header .header__nav .header__nav__list .header__nav__list__item {
+          display: block; }
+          .header .header__nav .header__nav__list .header__nav__list__item a {
+            font-size: 1.3rem;
+            padding: 0.2rem 0;
+            display: inline-block; }
+  .main-hero h1 {
+    font-size: 3rem; }
+  .main-planes-boxContainer__box {
+    margin: 1rem 0.3rem; }
+    .main-planes-boxContainer__box img {
+      max-width: 450px; }
+  .main-store-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .main-store-container .card2 img {
+      max-width: 400px; }
+    .main-store-container .card1 img {
+      max-width: 300px; }
+    .main-store-container .card3 img {
+      max-width: 300px; }
+  .button, .main-planesHero .main-planesHero__button {
+    font-size: 1.3rem; }
+  .footer {
+    flex-direction: column;
+    align-items: center; } }
+
+@media only screen and (max-width: 480px) {
+  h1 {
+    font-size: 3rem; }
+  h2 {
+    font-size: 2rem; }
+  h3 {
+    font-size: 1.3rem; }
+  p {
+    font-size: 1rem; }
+  .header__nav .header__nav__list {
+    margin-right: 0.3rem; }
+    .header__nav .header__nav__list .header__nav__list__item a {
+      font-size: 0.9rem;
+      padding-left: 0.3rem; }
+  .main-hero h1 {
+    font-size: 3rem; }
+  .button, .main-planesHero .main-planesHero__button {
+    font-size: 1.3rem; }
+  .main-planes-boxContainer__box {
+    margin: 1rem 0.3rem; }
+    .main-planes-boxContainer__box img {
+      max-width: 400px; }
+  .card1 img {
+    max-width: 300px !important;
+    min-width: 100px; }
+  .card2 img {
+    max-width: 300px !important;
+    min-width: 100px; }
+  .card3 img {
+    max-width: 300px !important;
+    min-width: 100px; } }
