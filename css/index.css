@@ -649,8 +649,7 @@ section {
   width: 256px;
   height: 340px;
   background-color: white;
-  margin-right: .2rem;
-  margin-left: .2rem;
+  margin: auto;
   box-shadow: 4px 1px 14px 1px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 4px 1px 14px 1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 4px 1px 14px 1px rgba(0, 0, 0, 0.75);
@@ -732,16 +731,10 @@ body {
   overflow-x: hidden; }
 
 @media only screen and (max-width: 1024px) {
-  h1 {
-    font-size: 4rem; }
-  h2 {
-    font-size: 2.5rem; }
   h3 {
     font-size: 1.6rem; }
   p {
-    font-size: 1.4rem; }
-  .header__nav__list a {
-    font-size: 1.4rem; }
+    font-size: 1.3rem; }
   .main-hero h1 {
     font-size: 5rem; }
   .main-exclusive, .main-community {
@@ -778,7 +771,7 @@ body {
     height: auto; }
     .header .fa-bars {
       display: block;
-      padding-right: 0.5rem;
+      padding-right: 1.5rem;
       position: absolute;
       top: 10px;
       right: 0;
@@ -793,7 +786,8 @@ body {
         .header .header__nav .header__nav__list .header__nav__list__item--drop:hover .header__nav__subList {
           display: block;
           position: relative;
-          text-align: center; }
+          text-align: center;
+          padding: 0; }
         .header .header__nav .header__nav__list .header__nav__list__item {
           display: block; }
           .header .header__nav .header__nav__list .header__nav__list__item a {

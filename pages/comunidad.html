@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/index.css">
     <script src="https://kit.fontawesome.com/a9b1c6a26a.js" crossorigin="anonymous"></script>
+    <script src="../js/functions.js"></script>
     <meta name="description" content="Reseñas, críticas, contenido oficial y no oficial de tus bandas preferidas. Registrate para participar">
     <meta name="keywords" content="reseña, review, fanart, booklet, mulib">
     <title>Comunidad</title>
@@ -17,8 +18,9 @@
         <a href="../index.html" class="header__logo box-scale">
             <img src="../images/logo.png" alt="logo" width="50">
         </a>
+        <i class="fas fa-bars" onclick="hamburgerMenu()"></i>
         <nav class="header__nav">
-            <ul class="header__nav__list">
+            <ul class="header__nav__list" id="navList">
                 <li class="header__nav__list__item header__nav__list__item--drop">
                     <a href=".planes.html">Planes</a>
                     <ul class="header__nav__subList">

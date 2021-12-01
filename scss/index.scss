@@ -811,8 +811,7 @@ section{
     width: 256px;
     height: 340px;
     background-color: white;
-    margin-right: .2rem;
-    margin-left: .2rem;
+    margin: auto;
     box-shadow: 4px 1px 14px 1px rgba(0,0,0,0.75);
     -webkit-box-shadow: 4px 1px 14px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 4px 1px 14px 1px rgba(0,0,0,0.75);
@@ -916,25 +915,13 @@ body{
 }
 
 @media only screen and (max-width: $large) {
-    h1{
-        font-size: 4rem;
-    }
-
-    h2{
-        font-size: 2.5rem;
-    }
 
     h3{
         font-size: 1.6rem;
     }
 
     p{
-        font-size: 1.4rem;
-    }
-    .header__nav__list{
-        a{
-            font-size: 1.4rem;
-        }
+        font-size: 1.3rem;
     }
     .main-hero{
         h1{
@@ -996,7 +983,7 @@ body{
         height: auto;
         .fa-bars{
             display: block;
-            padding-right: 0.5rem;
+            padding-right: 1.5rem;
             position: absolute;
             top: 10px;
             right: 0;
@@ -1014,6 +1001,7 @@ body{
                         display: block;
                         position: relative;
                         text-align: center;
+                        padding: 0;
                     }
                 }
                 .header__nav__list__item{

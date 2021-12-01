@@ -7,6 +7,8 @@
     <meta name="description" content="Iniciar sesión en MuLib o registrate para acceder al reproductor web. Descargar, escuchar gratis y comprar albums para ir a un paso más allá de inmersión">
     <meta name="keywords" content="login, registro, cuenta, suscripcion, spotify, mulib">
     <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/functions.js"></script>
+    <script src="https://kit.fontawesome.com/a9b1c6a26a.js" crossorigin="anonymous"></script>
     <title>Iniciar sesión</title>
 </head>
 <body class="body">
@@ -15,8 +17,9 @@
         <a href="../index.html" class="header__logo box-scale">
             <img src="../images/logo.png" alt="logo" width="50">
         </a>
+        <i class="fas fa-bars" onclick="hamburgerMenu()"></i>
         <nav class="header__nav">
-            <ul class="header__nav__list">
+            <ul class="header__nav__list" id="navList">
                 <li class="header__nav__list__item header__nav__list__item--drop">
                     <a href="./planes.html">Planes</a>
                     <ul class="header__nav__subList">

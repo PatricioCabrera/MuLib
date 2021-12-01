@@ -7,6 +7,7 @@
     <meta name="description" content="Comprá contenido oficial de Mulib, físico o digital. Vendé sin comisiones extra. Descargar, escuchar gratis y comprar albums para ir a un paso más allá de inmersión">
     <meta name="keywords" content="tienda, albums, store, comprar, spotify, mulib">
     <link rel="stylesheet" href="../css/index.css">
+    <script src="../js/functions.js"></script>
     <title>Tienda</title>
 </head>
 <body class="body body--grid">
@@ -14,8 +15,9 @@
         <a href="../index.html" class="header__logo box-scale">
             <img src="../images/logo.png" alt="logo" width="50">
         </a>
+        <i class="fas fa-bars" onclick="hamburgerMenu()"></i>
         <nav class="header__nav">
-            <ul class="header__nav__list">
+            <ul class="header__nav__list" id="navList">
                 <li class="header__nav__list__item">
                     <a href="#">Carrito</a>
                 </li>
