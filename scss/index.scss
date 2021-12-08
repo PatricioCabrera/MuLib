@@ -466,6 +466,7 @@ section{
     p{
         font-size: 1.2rem;
         color: white;
+        text-align: center;
     }
     .footer__menu{
         display: flex;
@@ -593,6 +594,7 @@ section{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        flex-wrap: wrap;
         text-align: center;
         margin: auto;
         margin-bottom: 2rem;
@@ -938,14 +940,22 @@ body{
     }
     .communityMainContainer{
         display: block !important;
+        .communityMainSection{
+            width: 96%;
+            margin: auto;
+        }
         .communityMainCard{
-            width: 96vw;
+            width: 100%;
             margin: 1rem;
             margin: auto;
         }
         .communityAsideCard{
-            width: 96vw;
+            width: 100%;
             margin: 1rem;
+        }
+        .communityMainAside{
+            display: block;
+            width: 96%;
         }
     }
     .main-store-container{
@@ -1015,6 +1025,23 @@ body{
             }
         }
     }
+    .communityMainContainer{
+        width: 100%;
+        margin: 0;
+        .communityMainSection{
+            margin: 0;
+            width: 100%;
+        }
+        .communityMainAside{
+            margin: 0;
+            width: 100%;
+            .communityAsideCard{
+                margin: 0;
+                width: 100%;
+            }
+        }
+    }
+    
     .main-hero{
         h1{
             font-size: 3rem;
@@ -1091,8 +1118,11 @@ body{
     .main-planes-boxContainer__box{
         margin: 1rem 0.3rem;
         img{
-            max-width: 400px;
+            max-width: 350px;
         }
+    }
+    .main-planes-tableContainer{
+        display: none;
     }
     @for $i from 1 through 3{
         .card#{$i}{
@@ -1100,6 +1130,29 @@ body{
                 max-width: 300px !important;
                 min-width: 100px;
             }
+        }
+    }
+    .communityMain{
+        .communityMainSection{
+            margin: auto;
+            width: auto;
+        }
+    }
+    .communityMainAside{
+        margin: 0;
+        width: auto;
+        .communityAsideCard{
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 360px){
+    .main-planes-boxContainer__box{
+        margin: 1rem 0.3rem;
+        img{
+            max-width: 100%;
         }
     }
 }

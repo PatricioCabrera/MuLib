@@ -373,7 +373,8 @@ section {
   justify-content: space-around; }
   .footer p {
     font-size: 1.2rem;
-    color: white; }
+    color: white;
+    text-align: center; }
   .footer .footer__menu {
     display: flex; }
     .footer .footer__menu .footer__item {
@@ -463,6 +464,7 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
   text-align: center;
   margin: auto;
   margin-bottom: 2rem;
@@ -745,13 +747,19 @@ body {
     font-size: 2rem; }
   .communityMainContainer {
     display: block !important; }
+    .communityMainContainer .communityMainSection {
+      width: 96%;
+      margin: auto; }
     .communityMainContainer .communityMainCard {
-      width: 96vw;
+      width: 100%;
       margin: 1rem;
       margin: auto; }
     .communityMainContainer .communityAsideCard {
-      width: 96vw;
+      width: 100%;
       margin: 1rem; }
+    .communityMainContainer .communityMainAside {
+      display: block;
+      width: 96%; }
   .main-store-container .card2 img {
     max-width: 300px; }
   .main-store-container .card1 img, .main-store-container .card3 img {
@@ -794,6 +802,18 @@ body {
             font-size: 1.3rem;
             padding: 0.2rem 0;
             display: inline-block; }
+  .communityMainContainer {
+    width: 100%;
+    margin: 0; }
+    .communityMainContainer .communityMainSection {
+      margin: 0;
+      width: 100%; }
+    .communityMainContainer .communityMainAside {
+      margin: 0;
+      width: 100%; }
+      .communityMainContainer .communityMainAside .communityAsideCard {
+        margin: 0;
+        width: 100%; }
   .main-hero h1 {
     font-size: 3rem; }
   .main-planes-boxContainer__box {
@@ -838,7 +858,9 @@ body {
   .main-planes-boxContainer__box {
     margin: 1rem 0.3rem; }
     .main-planes-boxContainer__box img {
-      max-width: 400px; }
+      max-width: 350px; }
+  .main-planes-tableContainer {
+    display: none; }
   .card1 img {
     max-width: 300px !important;
     min-width: 100px; }
@@ -847,4 +869,19 @@ body {
     min-width: 100px; }
   .card3 img {
     max-width: 300px !important;
-    min-width: 100px; } }
+    min-width: 100px; }
+  .communityMain .communityMainSection {
+    margin: auto;
+    width: auto; }
+  .communityMainAside {
+    margin: 0;
+    width: auto; }
+    .communityMainAside .communityAsideCard {
+      margin-left: 0;
+      margin-right: 0; } }
+
+@media only screen and (max-width: 360px) {
+  .main-planes-boxContainer__box {
+    margin: 1rem 0.3rem; }
+    .main-planes-boxContainer__box img {
+      max-width: 100%; } }
