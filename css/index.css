@@ -500,30 +500,38 @@ section {
 .fa-people-carry {
   font-size: 5rem; }
 
-.communityMain {
-  padding-top: 4rem; }
-  .communityMain h2 {
+.community {
+  padding-top: 3.5rem; }
+  .community .button, .community .main-planesHero .main-planesHero__button, .main-planesHero .community .main-planesHero__button {
+    display: block;
+    width: 250px;
+    font-size: 1rem;
+    padding: .5rem;
+    margin: 1rem auto;
+    text-align: center; }
+  .community h2 {
     font-size: 2.2rem;
     margin: 0; }
-  .communityMain h3 {
+  .community h3 {
     font-size: 1.6rem;
     margin-bottom: 1rem; }
-  .communityMain h2, .communityMain h3 {
+  .community h2, .community h3 {
     text-align: left;
     margin-left: 1rem; }
-  .communityMain p {
-    font-size: 1.1rem;
-    display: flex; }
-  .communityMain .communityMainContainer {
-    display: flex; }
-  .communityMain .communityMainSection {
+  .community p {
+    font-size: 1.1rem; }
+  .community .community-container {
+    display: flex;
+    justify-content: center; }
+    .community .community-container img {
+      max-width: 600px; }
+  .community .community-container-main {
     width: 60vw;
     padding: 0 .5rem 0 0;
-    margin: 0rem 0 0 1rem;
     display: flex;
     flex-direction: column;
     align-items: center; }
-  .communityMain .communityMainCard {
+  .community .community-container-main__card {
     display: flex;
     flex-direction: column;
     border: 2px solid black;
@@ -533,43 +541,45 @@ section {
     -moz-box-shadow: 3px 5px 6px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 3px 5px 6px 0px rgba(0, 0, 0, 0.75);
     text-align: justify; }
-  .communityMain .communityMainCard h4 {
-    text-align: center; }
-  .communityMain .cardTopContainer {
+    .community .community-container-main__card h4 {
+      text-align: center; }
+  .community .community-container-main__card__imgBox, .community .community-container-aside__card__imgBox {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 1rem; }
-    .communityMain .cardTopContainer div img {
-      display: block;
+    margin-bottom: 1rem;
+    flex-wrap: wrap; }
+    .community .community-container-main__card__imgBox img, .community .community-container-aside__card__imgBox img {
       margin: auto; }
-    .communityMain .cardTopContainer .detailsContainer {
+  .community .communityCard__usrBox {
+    background-color: gainsboro;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row; }
+    .community .communityCard__usrBox .communityCard__usrBox__details {
       display: flex;
       flex-direction: column;
-      font-size: 1rem;
-      text-align: center; }
+      align-items: center; }
+      .community .communityCard__usrBox .communityCard__usrBox__details em {
+        font-size: 1.1rem; }
+      .community .communityCard__usrBox .communityCard__usrBox__details .fas {
+        font-size: 1rem; }
 
-.communityMainAside {
+.community-container-aside {
   width: 35vw;
   display: flex;
   flex-direction: column; }
-
-.communityAsideCard {
-  border: 2px solid black;
-  padding: .5rem;
-  margin-bottom: 1rem;
-  background-color: white;
-  -webkit-box-shadow: 3px 5px 6px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 3px 5px 6px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 3px 5px 6px 0px rgba(0, 0, 0, 0.75); }
-
-.communityMain .button, .communityMain .main-planesHero .main-planesHero__button, .main-planesHero .communityMain .main-planesHero__button {
-  display: block;
-  width: 150px;
-  font-size: 1rem;
-  padding: .5rem;
-  margin: 1rem auto;
-  text-align: center; }
+  .community-container-aside .community-container-aside__card {
+    border: 2px solid black;
+    padding: .5rem;
+    margin-bottom: 1rem;
+    background-color: white;
+    -webkit-box-shadow: 3px 5px 6px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 5px 6px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 5px 6px 0px rgba(0, 0, 0, 0.75); }
+    .community-container-aside .community-container-aside__card .community-container-aside__card__imgBox img {
+      max-width: 300px; }
 
 .sectionContacto {
   padding-top: 4rem;
@@ -732,6 +742,10 @@ section {
 body {
   overflow-x: hidden; }
 
+@media only screen and (max-width: 1366px) {
+  .community .community-container img {
+    max-width: 320px; } }
+
 @media only screen and (max-width: 1024px) {
   h3 {
     font-size: 1.6rem; }
@@ -745,21 +759,21 @@ body {
     height: 95vh !important; }
   .button, .main-planesHero .main-planesHero__button {
     font-size: 2rem; }
-  .communityMainContainer {
-    display: block !important; }
-    .communityMainContainer .communityMainSection {
-      width: 96%;
-      margin: auto; }
-    .communityMainContainer .communityMainCard {
+  .community img {
+    max-width: 500px; }
+  .community .community-container {
+    display: block;
+    margin: 1rem; }
+    .community .community-container .community-container-main {
       width: 100%;
-      margin: 1rem;
-      margin: auto; }
-    .communityMainContainer .communityAsideCard {
-      width: 100%;
-      margin: 1rem; }
-    .communityMainContainer .communityMainAside {
-      display: block;
-      width: 96%; }
+      margin: auto;
+      padding: 0; }
+    .community .community-container .community-container-main__card {
+      margin-bottom: 0.5rem; }
+    .community .community-container .community-container-aside {
+      width: 100%; }
+    .community .community-container .community-container-aside__card {
+      margin-bottom: 0.5rem; }
   .main-store-container .card2 img {
     max-width: 300px; }
   .main-store-container .card1 img, .main-store-container .card3 img {
@@ -802,17 +816,20 @@ body {
             font-size: 1.3rem;
             padding: 0.2rem 0;
             display: inline-block; }
-  .communityMainContainer {
+  .community img {
+    max-width: 400px; }
+  .community .community-container {
     width: 100%;
     margin: 0; }
-    .communityMainContainer .communityMainSection {
+    .community .community-container .community-container-main {
       margin: 0;
       width: 100%; }
-    .communityMainContainer .communityMainAside {
+    .community .community-container .communityMainAside {
       margin: 0;
       width: 100%; }
-      .communityMainContainer .communityMainAside .communityAsideCard {
+      .community .community-container .communityMainAside .communityAsideCard {
         margin: 0;
+        margin-bottom: 0.5rem;
         width: 100%; }
   .main-hero h1 {
     font-size: 3rem; }
@@ -835,7 +852,9 @@ body {
     font-size: 1.3rem; }
   .footer {
     flex-direction: column;
-    align-items: center; } }
+    align-items: center; }
+    .footer p {
+      font-size: 1rem; } }
 
 @media only screen and (max-width: 480px) {
   h1 {
@@ -870,7 +889,9 @@ body {
   .card3 img {
     max-width: 300px !important;
     min-width: 100px; }
-  .communityMain .communityMainSection {
+  .community img {
+    max-width: 330px; }
+  .community .community-container-main {
     margin: auto;
     width: auto; }
   .communityMainAside {
@@ -884,4 +905,6 @@ body {
   .main-planes-boxContainer__box {
     margin: 1rem 0.3rem; }
     .main-planes-boxContainer__box img {
-      max-width: 100%; } }
+      max-width: 100%; }
+  .community img {
+    max-width: 300px; } }

@@ -622,8 +622,16 @@ section{
         font-size: 5rem;
     }
 }
-.communityMain{
-    padding-top: 4rem;
+.community{
+    .button{
+        display: block;
+        width: 250px;
+        font-size: 1rem;
+        padding: .5rem;
+        margin: 1rem auto;
+        text-align: center;
+    }
+    padding-top: 3.5rem;;
     h2{
         font-size: 2.2rem;
         margin: 0;
@@ -638,20 +646,23 @@ section{
     }
     p{
         font-size: 1.1rem;
-        display: flex;
     }
-    .communityMainContainer{
+    .community-container{
         display: flex;
+        justify-content: center;
+
+        img{
+            max-width: 600px;
+        }
     }
-    .communityMainSection{
+    .community-container-main{
         width: 60vw;
         padding: 0 .5rem 0 0;
-        margin: 0rem 0 0 1rem;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .communityMainCard{
+    .community-container-main__card{
         display: flex;
         flex-direction: column;
         border: 2px solid black;
@@ -661,53 +672,60 @@ section{
         -moz-box-shadow: 3px 5px 6px 0px rgba(0,0,0,0.75);
         box-shadow: 3px 5px 6px 0px rgba(0,0,0,0.75);
         text-align: justify;
+
+        h4{
+            text-align: center;
+        }
     }
-    .communityMainCard h4{
-        text-align: center;
-    }
-    .cardTopContainer{
+    .community-container-main__card__imgBox, .community-container-aside__card__imgBox{
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         margin-bottom: 1rem;
-        div{
-            img{
-                display: block;
-                margin: auto;
-            }
+        flex-wrap: wrap;
+        img{
+            margin: auto;
         }
-        .detailsContainer{
+    }
+    .communityCard__usrBox{
+        background-color: gainsboro;
+        border: 2px solid black;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+        .communityCard__usrBox__details{
+            em{
+                font-size: 1.1rem;
+            }
+            .fas{
+                font-size: 1rem;
+            }
             display: flex;
             flex-direction: column;
-            font-size: 1rem;
-            text-align: center;
+            align-items: center;
         }
     }
 }
 
-.communityMainAside{
+.community-container-aside{
     width: 35vw;
     display: flex;
     flex-direction: column;
-}
+    .community-container-aside__card{
+        border: 2px solid black;
+        padding: .5rem;
+        margin-bottom: 1rem;
+        background-color: white;
+        -webkit-box-shadow: 3px 5px 6px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 3px 5px 6px 0px rgba(0,0,0,0.75);
+        box-shadow: 3px 5px 6px 0px rgba(0,0,0,0.75);
 
-.communityAsideCard{
-    border: 2px solid black;
-    padding: .5rem;
-    margin-bottom: 1rem;
-    background-color: white;
-    -webkit-box-shadow: 3px 5px 6px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 3px 5px 6px 0px rgba(0,0,0,0.75);
-    box-shadow: 3px 5px 6px 0px rgba(0,0,0,0.75);
-}
-
-.communityMain .button{
-    display: block;
-    width: 150px;
-    font-size: 1rem;
-    padding: .5rem;
-    margin: 1rem auto;
-    text-align: center;
+        .community-container-aside__card__imgBox{
+            img{
+                max-width: 300px;
+            }
+        }
+    }
 }
 
 .sectionContacto{
@@ -916,6 +934,16 @@ body{
     overflow-x: hidden;
 }
 
+@media only screen and (max-width: 1366px) {
+    .community{
+        .community-container{
+            img{
+                max-width: 320px;
+            }
+        }
+    }
+}
+
 @media only screen and (max-width: $large) {
 
     h3{
@@ -938,24 +966,27 @@ body{
     .button{
         font-size: 2rem;
     }
-    .communityMainContainer{
-        display: block !important;
-        .communityMainSection{
-            width: 96%;
-            margin: auto;
+    .community{
+        img{
+            max-width: 500px;
         }
-        .communityMainCard{
-            width: 100%;
-            margin: 1rem;
-            margin: auto;
-        }
-        .communityAsideCard{
-            width: 100%;
-            margin: 1rem;
-        }
-        .communityMainAside{
+        .community-container{
             display: block;
-            width: 96%;
+            margin: 1rem; 
+            .community-container-main{
+                width: 100%;
+                margin: auto;
+                padding: 0;
+            }
+            .community-container-main__card{
+                margin-bottom: 0.5rem;
+            }
+            .community-container-aside{
+                width: 100%;
+            }
+            .community-container-aside__card{
+                margin-bottom: 0.5rem;
+            }
         }
     }
     .main-store-container{
@@ -1025,19 +1056,25 @@ body{
             }
         }
     }
-    .communityMainContainer{
-        width: 100%;
-        margin: 0;
-        .communityMainSection{
-            margin: 0;
-            width: 100%;
+    .community{
+        img{
+            max-width: 400px;
         }
-        .communityMainAside{
-            margin: 0;
+        .community-container{
             width: 100%;
-            .communityAsideCard{
+            margin: 0;
+            .community-container-main{
                 margin: 0;
                 width: 100%;
+            }
+            .communityMainAside{
+                margin: 0;
+                width: 100%;
+                .communityAsideCard{
+                    margin: 0;
+                    margin-bottom: 0.5rem;
+                    width: 100%;
+                }
             }
         }
     }
@@ -1080,6 +1117,9 @@ body{
     .footer{
         flex-direction: column;
         align-items: center;
+        p{
+            font-size: 1rem;
+        }
     }
 }
 
@@ -1132,8 +1172,11 @@ body{
             }
         }
     }
-    .communityMain{
-        .communityMainSection{
+    .community{
+        img{
+            max-width: 330px;
+        }
+        .community-container-main{
             margin: auto;
             width: auto;
         }
@@ -1153,6 +1196,11 @@ body{
         margin: 1rem 0.3rem;
         img{
             max-width: 100%;
+        }
+    }
+    .community{
+        img{
+            max-width: 300px;
         }
     }
 }
