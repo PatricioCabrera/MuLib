@@ -257,37 +257,37 @@ section {
   box-shadow: 1px 1px 10px 5px rgba(76, 189, 253, 0.89);
   -webkit-box-shadow: 1px 1px 10px 5px rgba(76, 189, 253, 0.89); }
 
-@keyframes glower-lightblue {
-  from {
-    box-shadow: 0 0 10px -10px 1px 1px 10px 5px rgba(76, 189, 253, 0.89); }
-  to {
-    box-shadow: 0 0 10px 10px 1px 1px 10px 5px rgba(76, 189, 253, 0.89); } }
-
-.glow-lightblue {
-  animation: glower-lightblue 1s infinite alternate; }
-
 .shadow-salmon {
   box-shadow: 1px 1px 10px 5px rgba(255, 139, 96, 0.89);
   -webkit-box-shadow: 1px 1px 10px 5px rgba(255, 139, 96, 0.89); }
-
-@keyframes glower-salmon {
-  from {
-    box-shadow: 0 0 10px -10px 1px 1px 10px 5px rgba(255, 139, 96, 0.89); }
-  to {
-    box-shadow: 0 0 10px 10px 1px 1px 10px 5px rgba(255, 139, 96, 0.89); } }
-
-.glow-salmon {
-  animation: glower-salmon 1s infinite alternate; }
 
 .shadow-gold {
   box-shadow: 1px 1px 10px 5px rgba(246, 191, 63, 0.89);
   -webkit-box-shadow: 1px 1px 10px 5px rgba(246, 191, 63, 0.89); }
 
+@keyframes glower-salmon {
+  from {
+    box-shadow: 0 0 10px -10px rgba(255, 139, 96, 0.89); }
+  to {
+    box-shadow: 0 0 10px 10px rgba(255, 139, 96, 0.89); } }
+
+.glow-salmon {
+  animation: glower-salmon 1s infinite alternate; }
+
+@keyframes glower-lightblue {
+  from {
+    box-shadow: 0 0 10px -10px rgba(76, 189, 253, 0.89); }
+  to {
+    box-shadow: 0 0 10px 10px rgba(76, 189, 253, 0.89); } }
+
+.glow-lightblue {
+  animation: glower-lightblue 1s infinite alternate; }
+
 @keyframes glower-gold {
   from {
-    box-shadow: 0 0 10px -10px 1px 1px 10px 5px rgba(246, 191, 63, 0.89); }
+    box-shadow: 0 0 10px -10px rgba(246, 191, 63, 0.89); }
   to {
-    box-shadow: 0 0 10px 10px 1px 1px 10px 5px rgba(246, 191, 63, 0.89); } }
+    box-shadow: 0 0 10px 10px rgba(246, 191, 63, 0.89); } }
 
 .glow-gold {
   animation: glower-gold 1s infinite alternate; }
@@ -297,7 +297,7 @@ section {
   transition: transform 0.3s; }
 
 .main-planes-boxContainer__box h3 {
-  text-align: center;
+  text-align: justify;
   background-color: red; }
 
 .main-planes-boxContainer__box img {
@@ -683,7 +683,7 @@ section {
 
 .boxContainer div h4 {
   font-size: 1rem;
-  text-align: center; }
+  text-align: left; }
 
 .boxContainer div h5 {
   font-size: 1rem;
@@ -805,11 +805,16 @@ body {
         background-color: black;
         margin: 0;
         display: none; }
-        .header .header__nav .header__nav__list .header__nav__list__item--drop:hover .header__nav__subList {
+        .header .header__nav .header__nav__list .header__nav__list__item--drop:active .header__nav__subList {
           display: block;
           position: relative;
           text-align: center;
           padding: 0; }
+        .header .header__nav .header__nav__list [aria-current="page"] {
+          pointer-events: none;
+          cursor: default;
+          text-decoration: none;
+          color: white; }
         .header .header__nav .header__nav__list .header__nav__list__item {
           display: block; }
           .header .header__nav .header__nav__list .header__nav__list__item a {
@@ -848,6 +853,9 @@ body {
       max-width: 300px; }
     .main-store-container .card3 img {
       max-width: 300px; }
+  .tiendaBoxContainer .boxContainer {
+    width: 300px;
+    height: 380px; }
   .button, .main-planesHero .main-planesHero__button {
     font-size: 1.3rem; }
   .footer {

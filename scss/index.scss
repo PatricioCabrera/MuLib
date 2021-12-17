@@ -6,6 +6,10 @@ $color1: #10B073;
 $color2: #012E1D;
 $color3: #4F3B1A;
 
+$salmon: rgba(255,139,96,0.89);
+$lightblue: rgba(76,189,253,0.89);
+$gold: rgba(246,191,63,0.89);
+
 $small: 480px;
 $medium: $small + 288px;
 $large: ($small * 2) + 64;
@@ -341,17 +345,42 @@ section{
         box-shadow: $color;
         -webkit-box-shadow: $color;
     }
-    @keyframes glower-#{$sombra}{
-        from {
-            box-shadow: 0 0 10px -10px $color;
-        }
-        to {
-            box-shadow: 0 0 10px 10px $color;
-        }
+}
+
+@keyframes glower-salmon{
+    from {
+        box-shadow: 0 0 10px -10px $salmon;
     }
-    .glow-#{$sombra}{
-        animation: glower-#{$sombra} 1s infinite alternate;
+    to {
+        box-shadow: 0 0 10px 10px $salmon;
     }
+}
+.glow-salmon{
+    animation: glower-salmon 1s infinite alternate;
+}
+
+@keyframes glower-lightblue{
+    from {
+        box-shadow: 0 0 10px -10px $lightblue;
+    }
+    to {
+        box-shadow: 0 0 10px 10px $lightblue;
+    }
+}
+.glow-lightblue{
+    animation: glower-lightblue 1s infinite alternate;
+}
+
+@keyframes glower-gold{
+    from {
+        box-shadow: 0 0 10px -10px $gold;
+    }
+    to {
+        box-shadow: 0 0 10px 10px $gold;
+    }
+}
+.glow-gold{
+    animation: glower-gold 1s infinite alternate;
 }
 
 .box-scale:hover{
@@ -361,7 +390,7 @@ section{
 
 .main-planes-boxContainer__box{
     h3{
-        text-align: center;
+        text-align: justify;
         background-color: red;
     }
     img{
@@ -857,7 +886,7 @@ section{
 
 .boxContainer div h4{
     font-size: 1rem;
-    text-align: center;
+    text-align: left;
 }
 
 .boxContainer div h5{
@@ -1037,13 +1066,19 @@ body{
                 background-color: black;
                 margin: 0;
                 display: none;
-                .header__nav__list__item--drop:hover{
+                .header__nav__list__item--drop:active{
                     .header__nav__subList{
                         display: block;
                         position: relative;
                         text-align: center;
                         padding: 0;
                     }
+                }
+                [aria-current="page"]{
+                    pointer-events: none;
+                    cursor: default;
+                    text-decoration: none;
+                    color: white;
                 }
                 .header__nav__list__item{
                     display: block;
@@ -1109,6 +1144,12 @@ body{
             img{
                 max-width: 300px;
             }
+        }
+    }
+    .tiendaBoxContainer{
+        .boxContainer{
+            width: 300px;
+            height: 380px;
         }
     }
     .button{
