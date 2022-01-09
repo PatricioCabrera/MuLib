@@ -8,7 +8,7 @@
     <meta name="keywords" content="tienda, albums, store, comprar, spotify, mulib">
     <link rel="stylesheet" href="../css/index.css">
     <script src="https://kit.fontawesome.com/a9b1c6a26a.js" crossorigin="anonymous"></script>
-    <script src="../js/functions.js"></script>
+    
     <title>Tienda</title>
 </head>
 <body class="body body--grid">
@@ -41,98 +41,98 @@
         <section>
             <div class="tiendaBoxContainer">
                 <h3>Basado en tus visitas</h3>
-                <div class="boxContainer">
+                <div class="boxContainer" id="visions" onclick="sumarPrecios(1050, 0)">
                     <img src="../images/visions.jpg" alt="">
                     <div>
-                        <h4>Visions - Stratovarius</h4>
+                        <h4 class="albumTitle">Visions - Stratovarius</h4>
                         <p>$1050</p>
                         <p>1997</p>
                     </div>
                 </div>
-                <div class="boxContainer">
+                <div class="boxContainer" id="temple_of_shadows" onclick="sumarPrecios(1300, 1)">
                     <img src="https://musicayoxigeno.files.wordpress.com/2018/09/angra-temple-of-shadows-album.jpg?w=300&h=300" alt="">
                     <div>
-                        <h4>Angra - Temple of Shadows</h4>
+                        <h4 class="albumTitle">Angra - Temple of Shadows</h4>
                         <p>$1300</p>
                         <p>2004</p>
                     </div>
                 </div>
-                <div class="boxContainer">
+                <div class="boxContainer" id="para_los_arboles" onclick="sumarPrecios(900, 2)">
                     <img src="https://www.cmtv.com.ar/tapas-cd/spinettaparalosarboles.jpg" alt="">
                     <div>
-                        <h4>Spinetta - Para los árboles</h4>
+                        <h4 class="albumTitle">Spinetta - Para los árboles</h4>
                         <p>$900</p>
                         <p>2003</p>
                     </div>
                 </div>
-                <div class="boxContainer">
+                <div class="boxContainer" id="life_for_rent" onclick="sumarPrecios(850, 3)">
                     <img src="https://www.buenamusica.com/media/fotos/discos/d/dido/dido_life-for-rent.jpg" alt="">
                     <div>
-                        <h4>Dido - Life for Rent</h4>
+                        <h4 class="albumTitle">Dido - Life for Rent</h4>
                         <p>$850</p>
                         <p>2003</p>
                     </div>
                 </div>
-                <div class="boxContainer">
+                <div class="boxContainer" id="redline" onclick="sumarPrecios(600, 4)">
                     <img src="https://f4.bcbits.com/img/a2948578075_10.jpg" alt="">
                     <div>
-                        <h4>Lazerhawk - RedLine</h4>
+                        <h4 class="albumTitle">Lazerhawk - RedLine</h4>
                         <p>$600</p>
                         <p>2010</p>
                     </div>
                 </div>
-                <div class="boxContainer">
+                <div class="boxContainer" id="tarot" onclick="sumarPrecios(900, 5)">
                     <img src="https://s.mxmcdn.net/images-storage/albums/9/2/3/3/7/3/28373329_350_350.jpg" alt="">
                     <div>
-                        <h4>Dark Moor - Tarot</h4>
+                        <h4 class="albumTitle">Dark Moor - Tarot</h4>
                         <p>$900</p>
                         <p>2007</p>
                     </div>
                 </div>
-                <div class="boxContainer">
+                <div class="boxContainer" id="almah" onclick="sumarPrecios(3300, 6)">
                     <img src="https://img.discogs.com/sQ6-GoKdx_RJFPpWXN1NbAykFMQ=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-9892138-1488055531-6474.jpeg.jpg" alt="">
                     <div>
-                        <h4>Almah - Almah</h4>
+                        <h4 class="albumTitle">Almah - Almah</h4>
                         <p>$3300</p>
                         <p>2006</p>
                     </div>
                 </div>
-                <div class="boxContainer">
+                <div class="boxContainer" id="elements_of_persuasion" onclick="sumarPrecios(3300, 7)">
                     <img src="https://direct.rhapsody.com/imageserver/images/alb.201995355/600x600.jpg" alt="">
                     <div>
-                        <h4>James Labrie - Elements of Persuasion</h4>
+                        <h4 class="albumTitle">James Labrie - Elements of Persuasion</h4>
                         <p>$3300</p>
                         <p>2005</p>
                     </div>
                 </div>
-                <div class="boxContainer">
+                <div class="boxContainer" id="stream_of_conscousness" onclick="sumarPrecios(1250, 8)">
                     <img src="https://m.media-amazon.com/images/I/51QPvdjZF9L.jpg" alt="">
                     <div>
-                        <h4>Vision Divine - Stream of Consciousness</h4>
+                        <h4 class="albumTitle">Vision Divine - Stream of Consciousness</h4>
                         <p>$1250</p>
                         <p>2004</p>
                     </div>
                 </div>
-                <div class="boxContainer">
+                <div class="boxContainer" id="no_gravity" onclick="sumarPrecios(1250, 9)">
                     <img src="https://img.discogs.com/kGshg3S2Iz1_KPWLa-c1o3iulXg=/fit-in/500x500/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-6324992-1416504614-8576.jpeg.jpg" alt="">
                     <div>
-                        <h4>Kiko Loureiro - No Gravity</h4>
+                        <h4 class="albumTitle">Kiko Loureiro - No Gravity</h4>
                         <p>$800</p>
                         <p>2005</p>
                     </div>
                 </div>
-                <div class="boxContainer">
+                <div class="boxContainer" id="tattooed_millionaire" onclick="sumarPrecios(2990, 10)">
                     <img src="../images/tienda/bruce-dickinson-tattooed-millionaire.webp" alt="Bruce Dickinson - Tattooed Millionaire">
                     <div>
-                        <h4>Bruce Dickinson - Tattooed Millionaire</h4>
+                        <h4 class="albumTitle">Bruce Dickinson - Tattooed Millionaire</h4>
                         <p>$2990</p>
                         <p>1990</p>
                     </div>
                 </div>
-                <div class="boxContainer">
+                <div class="boxContainer" id="archetype" onclick="sumarPrecios(1500, 11)">
                     <img src="../images/tienda/fear-factory-archetype.jpg" alt="Fear Factory - Archetype">
                     <div>
-                        <h4>Fear Factory - Archetype</h4>
+                        <h4 class="albumTitle">Fear Factory - Archetype</h4>
                         <p>$1500</p>
                         <p>2004</p>
                     </div>
@@ -142,50 +142,50 @@
         <section>
             <div class="tiendaBoxContainer">
                 <h3>Basado en tus búsquedas: Power Metal</h3>
-                <div class="boxContainer">
+                <div class="boxContainer" id="the_zeramin_game" onclick="sumarPrecios(4500, 12)">
                     <img src="https://images.genius.com/99164ebed05b7982d0621ad2887231f7.400x400x1.jpg" alt="Memories of Old - The Zeramin Game">
                     <div>
-                        <h4>Memories of Old - The Zeramin Game</h4>
+                        <h4 class="albumTitle">Memories of Old - The Zeramin Game</h4>
                         <p>$4500</p>
                         <p>2020</p>
                     </div>
                 </div>
-                <div class="boxContainer">
+                <div class="boxContainer" id="under_the_gray_banner" onclick="sumarPrecios(1250, 13)">
                     <img src="../images/tienda/dragonland-under-the-gray-banner.jpeg" alt="DragonLand - Under the Gray Banner">
                     <div>
-                        <h4>Dragonland - Under the Gray Banner</h4>
+                        <h4 class="albumTitle">Dragonland - Under the Gray Banner</h4>
                         <p>$1250</p>
                         <p>2011</p>
                     </div>
                 </div>
-                <div class="boxContainer">
+                <div class="boxContainer" id="beyond_the_sea" onclick="sumarPrecios(3300, 14)">
                     <img src="https://img.discogs.com/neapAGQZOl6PQe-FDPW4YF7s_6E=/fit-in/500x500/filters:strip_icc():format(webp):mode_rgb():quality(90)/discogs-images/R-13514728-1555659911-2988.jpeg.jpg" alt="">
                     <div>
-                        <h4>Dark Moor - Beyond the Sea</h4>
+                        <h4 class="albumTitle">Dark Moor - Beyond the Sea</h4>
                         <p>$3300</p>
                         <p>2005</p>
                     </div>
                 </div>
-                <div class="boxContainer">
+                <div class="boxContainer" id="a_legacy_of_honor" onclick="sumarPrecios(2500, 15)">
                     <img src="https://www.spirit-of-metal.com/les%20goupes/S/Soulspell/A%20Legacy%20of%20Honor/A%20Legacy%20of%20Honor.jpg" alt="">
                     <div>
-                        <h4>SoulSpell - A legacy of honor</h4>
+                        <h4 class="albumTitle">SoulSpell - A legacy of honor</h4>
                         <p>$2500</p>
                         <p>2008</p>
                     </div>
                 </div>
-                <div class="boxContainer">
+                <div class="boxContainer" id="rebirth" onclick="sumarPrecios(900, 16)">
                     <img src="https://img.discogs.com/t7Wz-W5BGmWIUcMisgymguvcp-8=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-1125048-1347317330-3026.jpeg.jpg" alt="">
                     <div>
-                        <h4>Angra - Rebirth</h4>
+                        <h4 class="albumTitle">Angra - Rebirth</h4>
                         <p>$900</p>
                         <p>2001</p>
                     </div>
                 </div>
-                <div class="boxContainer">
+                <div class="boxContainer" id="angel_of_salvation" onclick="sumarPrecios(8500, 17)">
                     <img src="https://img.discogs.com/te0YhycIEYzijK5sd7QSi5NhsRQ=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-4183413-1357880303-3825.jpeg.jpg" alt="">
                     <div>
-                        <h4>Galneryus - Angel of Salvation</h4>
+                        <h4 class="albumTitle">Galneryus - Angel of Salvation</h4>
                         <p>$8500</p>
                         <p>2012</p>
                     </div>
@@ -205,5 +205,6 @@
         </nav>
         <p>MuLib - Todos los derechos reservados - 2021</p>
     </footer>
+    <script src="../js/functions.js"></script>
 </body>
 </html>
