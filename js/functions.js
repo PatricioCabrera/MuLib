@@ -1,3 +1,10 @@
+class Album{
+  constructor(nombre, precio, año) {
+    this.nombre = nombre;
+    this.precio = precio;
+    this.año = año;
+  }
+}
 let subTotal = 0;
 let precioTotal = 0;
 let precioactual;
@@ -6,9 +13,16 @@ let cantidadAlbums = 0;
 let albums = document.querySelectorAll(".albumTitle");
 let albumTitles = [];
 
+let albumColection = [];
+
 for (let i = 0; i < albums.length; i++) {
   albumTitles.push(albums[i].innerHTML);
+  let albumtemporal = new Album(nombre = albumTitles[i]);
+
+  albumColection.push(albumtemporal);
 }
+
+
 
 function sumarPrecios(suma, posicion){
   cantidadAlbums += 1;
