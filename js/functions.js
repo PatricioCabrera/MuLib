@@ -1,3 +1,5 @@
+// La clase guardará cada album en el html en forma de objeto.
+
 class Album{
   constructor(nombre, precio, año) {
     this.nombre = nombre;
@@ -5,6 +7,7 @@ class Album{
     this.año = año;
   }
 }
+
 let subTotal = 0;
 let precioTotal = 0;
 let precioactual;
