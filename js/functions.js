@@ -13,25 +13,41 @@ let precioTotal = 0;
 let precioactual;
 let cantidadAlbums = 0;
 
-let albums = document.querySelectorAll(".albumTitle");
+let albumTitlesHtml = document.querySelectorAll(".albumTitle");
 let albumTitles = [];
 
-let albumColection = [];
+let albumPricesHtml = document.querySelectorAll(".albumPrice");
+let albumPrices = [];
 
-for (let i = 0; i < albums.length; i++) {
-  albumTitles.push(albums[i].innerHTML);
-  let albumtemporal = new Album(nombre = albumTitles[i]);
+let albumYearsHtml = document.querySelectorAll(".albumYear");
+let albumYears = [];
 
-  albumColection.push(albumtemporal);
+let albumObjCollection = [];
+let albumSelectCollection = [];
+
+for (let i = 0; i < albumTitlesHtml.length; i++) {
+  albumTitles.push(albumTitlesHtml[i].innerHTML);
+  albumPrices.push(albumPricesHtml[i].innerHTML.replace('$', ''));
+  albumYears.push(albumYearsHtml[i].innerHTML);
+
+  let temp = new Album(nombre = albumTitles[i], precio = albumPrices[i], año = albumYears[i]);
+
+  albumObjCollection.push(temp);
 }
 
+function selectAlbum(number){
+  return albumSelectCollection.push(albumObjCollection[number])
+}
 
+function countAlbums(){
+  return cantidadAlbums += 1;
+}
 
-function sumarPrecios(suma, posicion){
-  cantidadAlbums += 1;
-  precioactual = suma;
-  calcularIva(subTotal += suma);
-  return mostrarResultados(posicion);
+function sumPrices(){
+  for (price of albumSelectCollection){
+    precioTotal += parseInt(price.precio);
+  }
+  return precioTotal;
 }
 
 function calcularIva(){
