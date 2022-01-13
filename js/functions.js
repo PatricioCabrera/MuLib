@@ -25,6 +25,8 @@ let albumYears = [];
 let albumObjCollection = [];
 let albumSelectCollection = [];
 
+let albumSelectCart = [];
+
 for (let i = 0; i < albumTitlesHtml.length; i++) {
   albumTitles.push(albumTitlesHtml[i].innerHTML);
   albumPrices.push(albumPricesHtml[i].innerHTML.replace('$', ''));
@@ -36,18 +38,23 @@ for (let i = 0; i < albumTitlesHtml.length; i++) {
 }
 
 function selectAlbum(number){
-  return albumSelectCollection.push(albumObjCollection[number])
+  albumSelectCollection.push(albumObjCollection[number]);
+  return albumObjCollection[number];
 }
 
 function countAlbums(){
-  return cantidadAlbums += 1;
+  cantidadAlbums = 0;
+  for (album of albumSelectCollection){
+    cantidadAlbums++
+  }
+  return cantidadAlbums;
 }
 
 function sumPrices(){
   for (price of albumSelectCollection){
-    precioTotal += parseInt(price.precio);
+    subTotal += parseInt(price.precio);
   }
-  return precioTotal;
+  return subTotal;
 }
 
 function calcularIva(){
@@ -55,8 +62,28 @@ function calcularIva(){
   return precioTotal = iva + subTotal;
 }
 
-function mostrarResultados(posicion){
-  alert("$"+ precioactual + " añadidos. " + "\r\n" + "Album: " + albumTitles[posicion] + "\r\n" + "subtotal: $" + subTotal + "\r\n" + "total (iva incl.): $" + precioTotal);
+function mostrarResultados(number){
+  selectAlbum(number);
+  sumPrices();
+  calcularIva();
+  countAlbums()
+  alert("$"+ albumObjCollection[number].precio + " añadidos. " + "\r\n" + "Album: " + albumObjCollection[number].nombre + "\r\n" + "subtotal: $" + subTotal + "\r\n" + "total (iva incl.): $" + precioTotal + "\r\n" + "Cantidad albums: " + cantidadAlbums);
+}
+
+function showCart(){
+  let arrayOfNombres = [];
+  let string = "";
+
+  for (nombre of albumSelectCollection){
+    arrayOfNombres.push(nombre.nombre)
+  }
+  albumSelectCart = arrayOfNombres.sort();
+
+  for (let i=0; i < albumSelectCart.length; i++){
+    string += albumSelectCart[i]+" $" +albumSelectCollection[i].precio + "\r\n";
+  }
+
+  alert(string + "\r\n Albums: " + cantidadAlbums + "\r\n Subtotal: $" + subTotal + "\r\n Total: $"+ precioTotal);
 }
 
 function hamburgerMenu() {
@@ -67,3 +94,6 @@ function hamburgerMenu() {
     x.style.display = "block";
   }
 }
+
+alert("Click en un album para agregar al carrito");
+alert("Al hacer click en carrito se muestran los albums seleccionados, ordenados alfabéticamente");
